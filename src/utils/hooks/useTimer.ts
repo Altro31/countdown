@@ -1,15 +1,18 @@
-import {useState} from 'react'
+import {useEffect, useState} from 'react'
 import {Time} from "@/utils/interfaces/Time";
+import {useRest} from "@/utils/hooks/useRest";
 
 
 export function useTimer() {
 
-    const now = new Date()
-    const [timer, setTimer] = useState({hours: now.getHours(), minutes: now.getMinutes()} as Time)
-    setInterval(() => {
-        const now = new Date()
-        setTimer({hours: now.getHours(), minutes: now.getMinutes()} as Time)
-    }, 1000)
+    const [time, setTime] = useState<Time | null>()
 
-    return {timer}
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            setTime(useRest())
+        }, 100)
+        return () => clearInterval(intervalId)
+    }, []);
+
+    return {time}
 }
