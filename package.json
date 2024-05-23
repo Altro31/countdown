@@ -13,7 +13,6 @@
     "canvas-confetti": "^1.9.3",
     "next": "14.3.0-canary.76",
     "react": "19.0.0-beta-04b058868c-20240508",
-    "react-confetti": "^6.1.0",
     "react-dom": "19.0.0-beta-04b058868c-20240508"
   },
   "devDependencies": {
