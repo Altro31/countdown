@@ -32,7 +32,7 @@ export default function HappyBirthdayPage({}: Props) {
     const animation = startAnimation ? '' : ''
     return (
         <>
-            <main className="bg-slate-950 h-screen">
+            <main className="bg-slate-950 h-screen overflow-hidden">
                 <HappyBackground />
                 <div className="absolute top-0 left-0 h-screen w-screen flex flex-col md:flex-row md:gap-4 gap-8 text-white text-7xl items-center justify-center z-10">
                     <Happy/>
