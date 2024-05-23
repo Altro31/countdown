@@ -7,7 +7,12 @@ const nextConfig = {
         return [
             {
                 source: '/',
-                destination: '/countdown',
+                destination: '/happy-birthday',
+                permanent: true
+            },
+            {
+                source: '/countdown',
+                destination: '/happy-birthday',
                 permanent: true
             }
         ];
