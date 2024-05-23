@@ -7,7 +7,7 @@ interface Props {
 export function Happy({}: Props) {
 
     return (
-        <div>
+        <div className='shadow-2xl shadow-slate-950'>
             Happy
         </div>
     )

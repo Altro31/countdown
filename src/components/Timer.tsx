@@ -4,6 +4,7 @@ import {useTimer} from "@/utils/hooks/useTimer";
 import {DoubleDotsSeparator} from "@/components/DoubleDotsSeparator";
 import type {Time as TimeType} from "@/utils/interfaces/Time";
 import {Time} from "./Time";
+import {Messages} from "@/components/Messages";
 
 interface Props {
     initialTime: TimeType
@@ -19,6 +20,7 @@ export function Timer({initialTime}: Props) {
             <Time value={renderTime.minutes} type="minutes"/>
             <DoubleDotsSeparator/>
             <Time value={renderTime.seconds} type="seconds"/>
+            <Messages time={renderTime}/>
         </div>
     )
 }
