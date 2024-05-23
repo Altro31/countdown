@@ -1,6 +1,6 @@
 import {Time} from "@/utils/interfaces/Time";
 
-const target = {hours: 22, minutes: 59, seconds: 59}
+const target = {hours: 23, minutes: 59, seconds: 59}
 
 export function useRest() {
     const now = new Date()
